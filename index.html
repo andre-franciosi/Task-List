@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task List</title>
+    <script type="module">
+      import { createApp } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
+      import taskItem from "./components/taskItem.js";
+
+      const app = createApp({});
+      app.component("task-item", taskItem);
+      app.mount("#app");
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="checkbox.css" />
+  </head>
+  <body>
+    <div id="app">
+      <ul>
+        <task-item>Teste</task-item>
+        <task-item>Teste2</task-item>
+        <task-item>Teste3</task-item>
+        <task-item>Teste4</task-item>
+      </ul>
+    </div>
+  </body>
+</html>
