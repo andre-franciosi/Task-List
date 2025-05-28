@@ -12,14 +12,60 @@ body {
   align-items: center;
 }
 
+h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  color: #b9314f;
+  text-shadow: 5px 5px 5px black;
+  user-select: none;
+}
+
 ul {
+  display: flex;
+  flex-direction: column;
   list-style-type: none;
+  gap: 18px;
 }
 
 .task {
+  display: flex;
+  align-items: center;
+}
+
+.taskName {
   font-family: "Josefin Sans", sans-serif;
   font-size: 30px;
   color: #b9314f;
-  text-shadow: 10px 10px 10px black;
+  font-weight: 500;
   user-select: none;
+}
+
+input {
+  margin-right: 12px;
+  transform: scale(1.8);
+}
+
+.trashIcon {
+  color: #b9314f;
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.button-div {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-add {
+  border-radius: 10px;
+  height: 50px;
+  width: 220px;
+  font-size: 30px;
+  font-family: "Josefin Sans", sans-serif;
+  color: #b9314f;
+  box-shadow: 5px 5px 5px black;
 }
