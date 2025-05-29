@@ -39,7 +39,7 @@
         },
         methods: {
           addTask() {
-            let newTaskName = window.prompt("What's your new task?");
+            let newTaskName = window.prompt("What's your next task?");
             if (newTaskName) {
               this.tasks.push({
                 name: newTaskName,
@@ -60,6 +60,7 @@
   </head>
   <body>
     <div id="app">
+      <h1>Task List</h1>
       <section v-show="inProgressTasks.length">
         <h2>In Progress</h2>
         <ul>

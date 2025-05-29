@@ -12,13 +12,21 @@ body {
   align-items: center;
 }
 
+h1,
 h2 {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 50px;
   font-weight: 700;
   color: #b9314f;
   text-shadow: 5px 5px 5px black;
   user-select: none;
+}
+
+h1 {
+  font-size: 70px;
+}
+
+h2 {
+  font-size: 50px;
 }
 
 ul {
@@ -70,4 +78,15 @@ input {
   box-shadow: 5px 5px 5px black;
   background-color: #dec3be;
   border: none;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.button-add:hover {
+  background-color: #ad9f9c;
+}
+
+.button-add:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
