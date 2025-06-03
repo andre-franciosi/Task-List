@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+html,
+body {
+  height: 100%;
+  background-color: #3a4f41;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  color: #b9314f;
+  text-shadow: 5px 5px 5px black;
+  user-select: none;
+}
+
+h1 {
+  font-size: 70px;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  gap: 18px;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+}
+
+.taskName {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 30px;
+  color: #b9314f;
+  font-weight: 500;
+  user-select: none;
+}
+
+input {
+  margin-right: 12px;
+  transform: scale(1.8);
+}
+
+.trashIcon {
+  color: #b9314f;
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.button-div {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-add {
+  border-radius: 10px;
+  height: 50px;
+  width: 220px;
+  font-size: 30px;
+  font-family: "Josefin Sans", sans-serif;
+  color: #b9314f;
+  box-shadow: 5px 5px 5px black;
+  background-color: #dec3be;
+  border: none;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.button-add:hover {
+  background-color: #ad9f9c;
+}
+
+.button-add:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
