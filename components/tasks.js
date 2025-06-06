@@ -4,8 +4,8 @@ export default {
   components: { taskList },
   template: `
       <section>
-        <taskList :tasks="filters.inProgress" title="In Progress"></taskList>
-        <taskList :tasks="filters.completed" title="Completed"></taskList>
+        <taskList :tasks="filters.inProgress" title="In Progress" @delete-task="deleteTask"></taskList>
+        <taskList :tasks="filters.completed" title="Completed" @delete-task="deleteTask"></taskList>
         <div class="button-div" @click="addTask">
           <button class="button-add">Add new Task</button>
         </div>
@@ -44,6 +44,12 @@ export default {
           completed: false,
           id: this.tasks.length + 1,
         });
+      }
+    },
+    deleteTask(id) {
+      const index = this.tasks.findIndex((task) => task.id === id);
+      if (index !== -1) {
+        this.tasks.splice(index, 1);
       }
     },
   },

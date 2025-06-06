@@ -8,16 +8,15 @@ export default {
         <section v-show="tasks.length">
             <h2>{{ title }}</h2>
             <ul>
-                <taskItem v-for="task in tasks" :key="task.id" :task="task" @delete-task=deleteTask></taskItem>
+                <taskItem
+                v-for="task in tasks"
+                :key="task.id"
+                :task="task"
+                @delete-task="$emit('delete-task', task.id)"
+              />
             </ul>
         </section>
     `,
-  methods: {
-    deleteTask(id) {
-      alert(this.tasks[id]);
-      delete this.tasks[id];
-    },
-  },
   props: {
     tasks: Array,
     title: String,
