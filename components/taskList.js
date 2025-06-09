@@ -20,7 +20,7 @@ export default {
               @update:currentTag="currentTag = $event"></task-tag>
             <ul>
                 <taskItem
-                v-for="task in tasks"
+                v-for="task in filteredTasks"
                 :key="task.id"
                 :task="task"
                 @delete-task="$emit('delete-task', task.id)"
@@ -35,6 +35,12 @@ export default {
   computed: {
     tags() {
       return this.tasks.map((a) => a.tag);
+    },
+    filteredTasks() {
+      if (this.currentTag === "all") {
+        return this.tasks;
+      }
+      return this.tasks.filter((a) => a.tag === this.currentTag);
     },
   },
 };
