@@ -18,11 +18,19 @@ export default {
           name: "Completed task",
           completed: true,
           id: 1,
+          tag: "Science",
         },
         {
           name: "In Progress task",
           completed: false,
           id: 2,
+          tag: "Math",
+        },
+        {
+          name: "Read a book",
+          completed: false,
+          id: 3,
+          tag: "Science",
         },
       ],
     };
