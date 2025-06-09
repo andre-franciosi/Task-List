@@ -13,26 +13,7 @@ export default {
     `,
   data() {
     return {
-      tasks: [
-        {
-          name: "Completed task",
-          completed: true,
-          id: 1,
-          tag: "Science",
-        },
-        {
-          name: "In Progress task",
-          completed: false,
-          id: 2,
-          tag: "Math",
-        },
-        {
-          name: "Read a book",
-          completed: false,
-          id: 3,
-          tag: "Science",
-        },
-      ],
+      tasks: [],
     };
   },
   computed: {
@@ -42,6 +23,11 @@ export default {
         completed: this.tasks.filter((task) => task.completed),
       };
     },
+  },
+  created() {
+    axios.get("http://localhost:3001/tasks").then((response) => {
+      this.tasks = response.data;
+    });
   },
   methods: {
     addTask() {
