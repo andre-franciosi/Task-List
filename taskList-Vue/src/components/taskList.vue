@@ -1,5 +1,5 @@
 <template>
-  <section v-show="tasks.length">
+  <section v-show="this.tasks.length">
     <h2>{{ title }}</h2>
     <task-tag :tags="tags" :current-tag="currentTag" @update:currentTag="currentTag = $event" />
     <ul>
@@ -24,9 +24,9 @@ const props = defineProps({
 })
 
 function updateTask(updatedTask) {
-  const index = tasks.value.findIndex((t) => t.id === updatedTask.id)
+  const index = props.tasks.value.findIndex((t) => t.id === updatedTask.id)
   if (index !== -1) {
-    tasks.value[index] = updatedTask
+    this.tasks.value[index] = updatedTask
   }
 }
 
