@@ -30,8 +30,6 @@ function updateTask(updatedTask) {
   }
 }
 
-defineEmits(['delete-task'])
-
 const currentTag = ref('all')
 
 const tags = computed(() => {

@@ -1,7 +1,7 @@
 <template>
   <section>
-    <task-list :tasks="filters.inProgress" title="In Progress" @delete-task="deleteTask" />
-    <task-list :tasks="filters.completed" title="Completed" @delete-task="deleteTask" />
+    <task-list :tasks="filters.inProgress" title="In Progress" />
+    <task-list :tasks="filters.completed" title="Completed" />
     <div class="button-div" @click="addTask">
       <button class="button-add">Add new Task</button>
     </div>
@@ -28,13 +28,6 @@ function addTask() {
       completed: false,
       id: tasks.value.length + 1,
     })
-  }
-}
-
-function deleteTask(id) {
-  const index = tasks.value.findIndex((task) => task.id === id)
-  if (index !== -1) {
-    tasks.value.splice(index, 1)
   }
 }
 
