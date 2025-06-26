@@ -22,11 +22,13 @@ const filters = computed(() => ({
 
 function addTask() {
   const newTaskName = window.prompt("What's your next task?")
-  if (newTaskName) {
+  const tagName = window.prompt("What's the tag of this task?")
+  if (newTaskName && tagName) {
     tasks.value.push({
       name: newTaskName,
       completed: false,
       id: tasks.value.length + 1,
+      tag: tagName,
     })
   }
 }
